@@ -1,44 +1,31 @@
-country-state-city
-==============================
-Basic library for Country, State and City
+# country-state-lib
+Basic library for Countries and States
 
-Data taken from:
+This is a fork of [harpreetkhalsagtbit/country-state-city](https://github.com/harpreetkhalsagtbit/country-state-city) that excludes the cities functionality, reducing the overall bundle-size by roughly 4.2MB.
 
-https://github.com/hiiamrohit/Countries-States-Cities-database
+Data sourced from [hiiamrohit/Countries-States-Cities-database](https://github.com/hiiamrohit/Countries-States-Cities-database)
 
 # Install
-`npm i country-state-city`
+
+`npm install country-state-lib`
+or
+`yarn add country-state-lib`
 
 # Usage
 
-## Latest Release : `v1.0.0` (First Major Version Release - Not backward compatible)
   - ES6 Module usage
    
      ```js
-     import csc from 'country-state-city'
+     import csc from 'country-state-lib'
 
      // Import Interfaces`
-     import { ICountry, IState, ICity } from 'country-state-city'
-     ```
-  - AMD Module usage
-  
-    ```js
-    let csc = require('country-state-city').default
-    ```
-
-
-## For versions `v0.1.8 and below`
-
-  - ES6 Module usage
-   
-     ```js
-     import csc from 'country-state-city'
+     import { ICountry, IState } from 'country-state-lib'
      ```
 
   - AMD Module usage
-  
+
     ```js
-    let csc = require('country-state-city')
+    let csc = require('country-state-lib').default
     ```
 
 # Docs
@@ -90,21 +77,6 @@ type: **json | IState**
 }
 ```
 
-getCityById(id)
----------------
-
-It accepts a valid `CityId` and   returns *City Details*
-
-type: **json | ICity**
-
-```js
-{
-	"id": "3",
-	"name": "Port Blair",
-	"state_id": "1"
-}
-```
-
 getStatesOfCountry(countryId)
 ---------------
 
@@ -120,25 +92,6 @@ type: **array of json | IState**
     "country_id": "246"
   }
 ]
-
-```
-getCitiesOfState(stateId)
----------------
-
-It accepts a valid `CityId` and   returns *all Cities* as Array of JSON
-
-type: **array of json | ICity**
-
-```js
-[
-  {
-    "id": "3",
-    "name": "Port Blair",
-    "state_id": "1"
-  }
-]
-
-```
 
 getAllCountries
 ---------------
@@ -156,29 +109,3 @@ type: **array of json | ICountry**
   }
 ]
 ```
-
-Special Thanks
----------------
-
-[@baywet](https://github.com/baywet) - For mentoring Javascript to Typescript Conversion
-
-Change Logs
----------------
-
-**v1.0.0**
-
-1. `export = {}` changed to `export default` in index.ts.
-2. `Interface` type `re-exported` from `index.ts`.
-3. `Compatible` with `ES6` module syntax.
-4. `Compatible` with `AMD` module - using `require('../index').default`.
-5. Add tests for Interface Re-Exports.
-6. Test cases for both AMD modules and ES6 modules usage.
-7. Common Test Cases are being shared between AMD and ES6 modules test files.
-
-**v0.1.8**
-1. Development code - Javascript to Typescript conversion: [#12](https://github.com/harpreetkhalsagtbit/country-state-city/pull/12)
-
-**v0.1.0**
-1. Fix: [#2](https://github.com/harpreetkhalsagtbit/country-state-city/issues/2)
-2. Fix: [#3](https://github.com/harpreetkhalsagtbit/country-state-city/issues/3)
-3. Added some missing states and cities for Canada and US
