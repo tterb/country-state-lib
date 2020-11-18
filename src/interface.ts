@@ -10,8 +10,3 @@ export interface IState {
     name: string;
     country_id: string;
 }
-export interface ICity {
-   id: string;
-   name: string;
-   state_id: string;
-}

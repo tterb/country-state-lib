@@ -1,5 +1,5 @@
 import csc from '../index';
-import { ICountry, ICity, IState } from '../index';
+import { IState } from '../index';
 
 const executeAllTests = function(csc: any) {
   test('Check for Country By Id ', () => {
@@ -28,12 +28,6 @@ const executeAllTests = function(csc: any) {
     const code = '32';
     let state = csc.getStateById(code);
     expect(state).toEqual({ country_id: '101', id: '32', name: 'Punjab' });
-  })
-
-  test('Check for City By Id ', () => {
-    const code = '31439';
-    let city = csc.getCityById(code);
-    expect(city).toEqual({ id: '31439', name: 'Lahore', state_id: '2728' });
   })
 
   test('Check for Canada States', () => {
@@ -161,13 +155,6 @@ const executeAllTests = function(csc: any) {
       'Uttarakhand',
       'West Bengal'
     ])
-  })
-
-  test('Check Cities for Delhi', () => {
-    const code = '101';
-    let cities = csc.getCitiesOfState('10');
-    let names = cities.map((city: ICity) => city.name);
-    expect(names).toEqual(['Delhi', 'New Delhi']);
   })
 }
 export default executeAllTests;
