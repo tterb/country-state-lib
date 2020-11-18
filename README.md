@@ -1,17 +1,21 @@
-# country-state-lib
+# country-state-lib  
 Basic library for Countries and States
 
 This is a fork of [harpreetkhalsagtbit/country-state-city](https://github.com/harpreetkhalsagtbit/country-state-city) that excludes the cities functionality, reducing the overall bundle-size by roughly 4.2MB.
 
 Data sourced from [hiiamrohit/Countries-States-Cities-database](https://github.com/hiiamrohit/Countries-States-Cities-database)
 
-# Install
+# Install  
 
-`npm install country-state-lib`
+```
+npm install country-state-lib
+```
 or
-`yarn add country-state-lib`
+```
+yarn add country-state-lib
+```
 
-# Usage
+# Usage  
 
   - ES6 Module usage
    
@@ -28,12 +32,12 @@ or
     let csc = require('country-state-lib').default
     ```
 
-# Docs
+# Documentation  
 
-getCountryByCode(code)
+### getCountryByCode(code)  
 ---------------
 
-It accepts a valid `CountryCode` eg: `'AS'` and   returns *Country Details*
+Accepts a valid `CountryCode` eg: `'AS'` and returns *Country Details*
 
 type: **json | ICountry**
 
@@ -46,10 +50,10 @@ type: **json | ICountry**
 }
 ```
 
-getCountryById(id)
+### getCountryById(id)  
 ---------------
 
-It accepts a valid `CountryId` and   returns *Country Details*
+Accepts a valid `CountryId` and returns *Country Details*
 
 type: **json | ICountry**
 
@@ -62,10 +66,10 @@ type: **json | ICountry**
 }
 ```
 
-getStateById(id)
+### getStateById(id)  
 ---------------
 
-It accepts a valid `StateId` and   returns *State Details*
+Accepts a valid `StateId` and returns *State Details*
 
 type: **json | IState**
 
@@ -77,10 +81,10 @@ type: **json | IState**
 }
 ```
 
-getStatesOfCountry(countryId)
+### getStatesOfCountry(countryId)  
 ---------------
 
-It accepts a valid `CountryId` and   returns *all States* as Array of JSON
+Accepts a valid `CountryId` and returns *all States* as Array of JSON
 
 type: **array of json | IState**
 
@@ -92,10 +96,11 @@ type: **array of json | IState**
     "country_id": "246"
   }
 ]
+```
 
-getAllCountries
----------------
-It returns **all Countries**
+### getAllCountries  
+
+Returns **all Countries**
 
 type: **array of json | ICountry**
 
