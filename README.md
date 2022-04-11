@@ -1,3 +1,6 @@
+[![Version](https://img.shields.io/npm/v/country-state-lib?color=brightgreen)](https://www.npmjs.com/package/country-state-lib)
+[![License](https://img.shields.io/npm/l/country-state-lib?color=blue)](https://www.gnu.org/licenses/gpl-3.0)
+
 # country-state-lib  
 Basic library for Countries and States
 
